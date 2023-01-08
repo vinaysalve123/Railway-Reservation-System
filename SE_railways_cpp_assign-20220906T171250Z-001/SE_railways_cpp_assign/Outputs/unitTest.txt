@@ -1,0 +1,4 @@
+if nothing is printed unit test is passed
+a.out(32095,0x1138bae00) malloc: *** error for object 0x113810002: pointer being freed was not allocated
+a.out(32095,0x1138bae00) malloc: *** set a breakpoint in malloc_error_break to debug
+Abort trap: 6

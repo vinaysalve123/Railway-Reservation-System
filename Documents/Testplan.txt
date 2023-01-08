@@ -1,0 +1,39 @@
+19CS30019 Girish Kumar 
+
+Application test Plan / unit Test for Booking
+1.zero fare when from station and to station are same
+2.if stations are swapped fare should be same for same Bookingclass
+
+3.each bookingclass is Available between any two Stations
+
+unit test plan for BOOKINGCLASS.
+for each of the concrete classes ACCHairCar, SecondSitting, ACFirstClass ,FirstClass, AC2Tier,AC3Tier,Sleeping
+static unitTest<BOOKINGCLASS> function is created which checks for 
+GetName() -  Giving correct name for each class
+GetLoadFactor() -  giving correct load factor for each class
+GetNoOfTiers()- giving correct no of tiers for each class
+IsAC()- Given class is AC or Not 
+IsLuxury()- given class is luxury or ordinary 
+IsSitting()  - given class is Sleeper or Sitting 
+
+
+unit test for Railways;
+creating a singleton object Indianrailways of type Railways, with this calling 
+GetSation() - checking if Getstation returns a station object or not by getting name of station object
+GetDistance()- Checking if it is giving correct distance between two stations or not . 
+
+unit test for station:
+creating a object of type station with that calling function
+GetName()- checking if it returns the correct name of the station object 
+GetDistance() - checking if it returns the correct distance between the station object and the parameter passeed of type station
+
+unit test for Date
+created a date Object and checking if date is constructed correctly with given parameters
+
+
+
+
+
+
+
+

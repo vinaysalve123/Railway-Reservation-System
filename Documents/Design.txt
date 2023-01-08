@@ -1,0 +1,118 @@
+
+// 19CS30018 - Girish Kumar 
+design principles :
+
+1.Use CamelCase for naming variables, classes, types and functions
+2.Start every variable with a lower case letter
+4.Start every function and class with an upper case letter
+5.Use a trailing underscore (_) for every non-static data member
+6.Use a leading ’s’ for every static data member
+7. polymorphic hierarchy  provide a virtual destructor in the base class
+8.The project should compile without any compiler warning
+9.Indent code properly
+10.Comment the code liberally and meaningfully
+
+11. Singleton Classes are implemented as Meyer's Singleton where the constructors are private (protected if a base class), and the constructor can only be accessed by a static function
+    Destructors can be public/private
+    An instance of the class is created when the static fn. is first called and for the subsequent fn. calls, the reference to the same instance is returned (viz. property of Singletons)
+(d) The member methods which do not change any attribute values are defined as const methods so that const objects can access these methods
+(e) Virtual destructors in base classes are important to prevent slicing of derived objects
+
+Classes created:
+    (1) Station 
+    (2) Date 
+    (3) Railways :  Meyer's Singleton class
+    (4) Booking 
+    (5) BookingClasses : polymorphic class Heirarchy ,Meyer's Singleton 
+    (6) Seat and Berth - derived from BookingClass
+    (7) Tier0 - derived from seat and Tier2 , Tier3  - derived from Berth
+    (8) ACChairCar,SecondSitting - derived from Tier0 
+    (9) ACFirstClass,AC2Tier, FirstClass - derived from Tier2
+    (7) AC3Tier, Sleeper - derived from Tier 3; 
+
+
+
+
+* HLD and LLD of methods and attributes of each class involved in the Application :
+
+Station class:
+	Data Members:
+		name: name of the station. (private) 
+	Member functions:
+		GetName: returns the name of the object of this class. Public.
+		GetDistance: returns the distance to another station. Public.
+
+Class Date :
+    Data members:
+        date_, month_, year_ - stores date , month and year respectively (private)
+    member Functions:
+        output streaming operator - to print date;
+
+Class Railways :(singleton class ,private constructor ,destructor)
+    Data members :
+        sStation - static map to store stations
+        sDistance -  static map with pair of station and distance between them
+    member functions :
+        IndianRailways - static , return a singleton object of type Railways
+        GetStation - returns a pointer station from static map
+        GetDistance -  returns distance between any two pair of stations stored in sDistance
+
+    
+
+Class BookingClasses :(polymorphic heirarchy , virtual destructor)
+    Data members: all are protected to be used in derived classes
+        string name_;
+        double FareLoadFactor_;  
+        const string seat;        
+        const int AC;
+        const int NoTiers;        
+        const int Luxury ; 
+    
+    member functions: all are pure vuirtual making it a abstract class
+         double GetLoadFactor() const = 0;
+         string GetName()const =0;
+         bool IsSitting()const =0;
+         bool IsAC()const =0;
+         int GetNumberOfTiers()const=0;
+         bool IsLuxury() const =0;
+       
+
+Class Seat, Berth :
+    derived classes from BookingClass
+    has a static variable sName , has value "Sleeping" in Seat and "Sitting" in Berth
+    each has a member function IsSitting return 1 in Seat and 0 in Berth
+
+class Tier0 , Tier2 ,Tier3:
+    Tier0 - derived from Seat , has 0 tiers 
+    Tier2 , Tier3 - derived from Berth has Tier 2 and 3 respectively stored in static member sTier
+
+class AC2Tier, AC3Tier, ACChairCar ,ACFirstClass, FirstClass ,SecondSitting:
+    each derived from Tier0, Tier2 ,Tier3 depending on which class has how many tiers
+    member Function:
+        Constructor - construct obj with particular Has-A values
+        Type() - return a object of this class (static) ,refrenced by a BookingClass vairable
+        Getname() -  returns name of the class 
+        GetLoadFactor() - returns Load factor value
+        IsAC() - return true or false
+        IsLuxury() - return true or false
+
+
+Class Booking :
+    uses all above defined classes as datamebers
+    data members:(private)
+        fromStation_
+        ToStation_
+        Date -
+        Bookingclass-
+        int Fare
+    datamebers:(static)
+        sBareFarePerKM ,sACSurcharge, sLuxuryTaxPercent  - For computing fare
+        sBookingPNRSerial - for allocating PNR
+        vector< Booking* >sBooking  - storing list of Bookings done
+    memberfunctions:
+        computefare - calculate fare store it in Fare
+        GetFare - return Fare
+        output operator<< - for printing Bookings Done ,friend function(acces private data members)
+
+
+

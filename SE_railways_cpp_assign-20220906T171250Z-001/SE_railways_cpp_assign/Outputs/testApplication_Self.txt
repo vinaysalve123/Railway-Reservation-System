@@ -1,0 +1,135 @@
+fare for two same stations is 0.
+
+Fare is same, stations are swapped given bookingclass is same ,date may be different
+
+station are not connected
+PNR Number = 1
+From Station = Mumbai
+To Station = Mumbai
+Travel Date = 12/May/2021
+Travel Class = AC First Class
+  : Mode : Sleeping
+  : Comfort : AC
+  : Bunks : 2
+  : Luxury : No
+Fare = 0
+
+
+PNR Number = 2
+From Station = Kolkata
+To Station = Delhi
+Travel Date = 13/Jun/2021
+Travel Class = AC 2 Tier
+  : Mode : Sleeping
+  : Comfort : AC
+  : Bunks : 2
+  : Luxury : Yes
+Fare = 1522
+
+
+PNR Number = 3
+From Station = Delhi
+To Station = Kolkata
+Travel Date = 17/Jul/2021
+Travel Class = AC 2 Tier
+  : Mode : Sleeping
+  : Comfort : AC
+  : Bunks : 2
+  : Luxury : Yes
+Fare = 1522
+
+
+PNR Number = 4
+From Station = Mumbai
+To Station = Delhi
+Travel Date = 23/Aug/2021
+Travel Class = AC 3 Tier
+  : Mode : Sleeping
+  : Comfort : AC
+  : Bunks : 3
+  : Luxury : Yes
+Fare = 1315
+
+
+PNR Number = 5
+From Station = Chennai
+To Station = Delhi
+Travel Date = 15/Sep/2021
+Travel Class = AC Chair Car
+  : Mode : Sitting
+  : Comfort : AC
+  : Bunks : 0
+  : Luxury : Yes
+Fare = 3320
+
+
+PNR Number = 6
+From Station = Chennai
+To Station = Kolkata
+Travel Date = 7/Oct/2021
+Travel Class = Sleeper
+  : Mode : Sleeping
+  : Comfort : Non-AC
+  : Bunks : 3
+  : Luxury : Yes
+Fare = 829
+
+
+PNR Number = 7
+From Station = Mumbai
+To Station = Delhi
+Travel Date = 20/Nov/2021
+Travel Class = Second Sitting
+  : Mode : Sitting
+  : Comfort : Non-AC
+  : Bunks : 0
+  : Luxury : Yes
+Fare = 361
+
+
+PNR Number = 8
+From Station = Delhi
+To Station = Mumbai
+Travel Date = 22/May/2021
+Travel Class = First Class
+  : Mode : Sleeping
+  : Comfort : Non-AC
+  : Bunks : 2
+  : Luxury : No
+Fare = 1446
+
+
+PNR Number = 9
+From Station = Kolkata
+To Station = Bengalore
+Travel Date = 22/May/2021
+Travel Class = AC Chair Car
+  : Mode : Sitting
+  : Comfort : AC
+  : Bunks : 0
+  : Luxury : Yes
+Fare = 2537
+
+
+PNR Number = 10
+From Station = Bangalore
+To Station = chennai
+Travel Date = 22/May/2021
+Travel Class = AC 2 Tier
+  : Mode : Sleeping
+  : Comfort : AC
+  : Bunks : 2
+  : Luxury : Yes
+Fare = 50
+
+
+PNR Number = 11
+From Station = Delhi
+To Station = Bangalore
+Travel Date = 22/May/2021
+Travel Class = Second Sitting
+  : Mode : Sitting
+  : Comfort : Non-AC
+  : Bunks : 0
+  : Luxury : Yes
+Fare = 537

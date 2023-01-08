@@ -1,0 +1,12 @@
+19CS30019 Girish kumar
+for running Application(self).cpp file
+g++ Application\(self\).cpp Booking.cpp BookingClasses.cpp Railways.cpp Station.cpp Date.cpp
+./a.out
+
+for running Test_application.cpp
+g++ Test_application.cpp Booking.cpp BookingClasses.cpp Railways.cpp Station.cpp Date.cpp
+./a.out
+
+for running unitTestApplication.cpp
+g++ unitTestApplication.cpp Booking.cpp BookingClasses.cpp Railways.cpp Station.cpp Date.cpp
+./a.out
